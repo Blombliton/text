@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Python-cod</title>
+    <link rel="stylesheet" href="/bootstrap.min.css" />
+    <link rel="stylesheet" href="/main.css" />
+</head>
+<body>
+  <ul class="nav nav-tabs bg-success shadow rounded sticky-sm-top ">
+    <li class="nav-item">
+      <a class="nav-link text-white" aria-current="page" href="../index">Главная</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white" href="../data">Подключение и обработка</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-white" href="../text">Работа с данными</a>
+      </li> 
+    <li class="nav-item">
+      <a class="nav-link active link-dark fw-bolder" href="../table">Визуализация</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white" href="../photo">Модель</a>
+    </li>
+  </ul>
+  
+    <div class="container gx-3 py-3">
+    <p class="text-start fs-2 fw-bold text-success"> Обработка таблицы</p>
+    <p class="text-start fw-bolder">Импорт библиотек</p>
+     <p>import pandas as pd #Импорт библиотеки Pandas</p>   
+     <p>import numpy as np #Импорт библиотеки Numpy</p>
+     <p>import matplotlib.pyplot as plt #Импорт библиотеки Matplotlib</p>
+     <p>#from sklearn.linear_model import LinearRegression, GammaRegressor</p>
+     <p>import csv</p>
+     <p>.</p>
+     <p class="text-start fw-bolder">Загрузка баз данных</p>
+     <p>pd.set_option('display.max_columns', None) #Убираем ограничение с колонок, при выводе БД</p>
+     <p>rd = pd.read_csv('test_ses.csv', delimiter=',') #Открываем БД, и ставим разделитель, что бы можно было вывести БД</p>
+     <p>db = pd.DataFrame(rd) #Переменная, при обращении к которой, будет выводится БД</p>
+     <p>.</p>
+     <p>print(db.describe()) #Вывод информации по БД, для того что бы найти пустые значения если они есть.</p>
+     <p>db.fillna(0) #Заменяем пустые значения на 0</p>
+     <p>db.sort_values('site1') #Сортировка таблицы по колонке 'site1'</p>
+     <p>print(db.describe()) #Перепроверяем, убрались ли пустые значения</p>   
+     <p>.</p>   
+     <p class="text-start fw-bolder">Выводим график БД</p>   
+     <p>plt.scatter(db['site1'], db['site2']) #Указываем тип графика, и выбираем колонки из БД</p>   
+     <p>plt.show() #Выводим точечный график</p>   
+    </div>
+</body>
+</html>
