@@ -25,28 +25,29 @@
     </li>
   </ul>
   
-    <div class="container gx-3 py-3">
-    <p class="text-start fs-2 fw-bold text-success"> Обработка таблицы</p>
-    <p class="text-start fw-bolder">Импорт библиотек</p>
-     <p>import pandas as pd #Импорт библиотеки Pandas</p>   
-     <p>import numpy as np #Импорт библиотеки Numpy</p>
-     <p>import matplotlib.pyplot as plt #Импорт библиотеки Matplotlib</p>
-     <p>#from sklearn.linear_model import LinearRegression, GammaRegressor</p>
-     <p>import csv</p>
-     <p>.</p>
-     <p class="text-start fw-bolder">Загрузка баз данных</p>
-     <p>pd.set_option('display.max_columns', None) #Убираем ограничение с колонок, при выводе БД</p>
-     <p>rd = pd.read_csv('test_ses.csv', delimiter=',') #Открываем БД, и ставим разделитель, что бы можно было вывести БД</p>
-     <p>db = pd.DataFrame(rd) #Переменная, при обращении к которой, будет выводится БД</p>
-     <p>.</p>
-     <p>print(db.describe()) #Вывод информации по БД, для того что бы найти пустые значения если они есть.</p>
-     <p>db.fillna(0) #Заменяем пустые значения на 0</p>
-     <p>db.sort_values('site1') #Сортировка таблицы по колонке 'site1'</p>
-     <p>print(db.describe()) #Перепроверяем, убрались ли пустые значения</p>   
-     <p>.</p>   
-     <p class="text-start fw-bolder">Выводим график БД</p>   
-     <p>plt.scatter(db['site1'], db['site2']) #Указываем тип графика, и выбираем колонки из БД</p>   
-     <p>plt.show() #Выводим точечный график</p>   
-    </div>
+  <div class="container">
+   <pre>
+    <code>
+    import pandas as pd #Импорт библиотеки Pandas
+    import numpy as np #Импорт библиотеки Numpy
+    import matplotlib.pyplot as plt #Импорт библиотеки Matplotlib
+    #from sklearn.linear_model import LinearRegression, GammaRegressor
+    import csv
+
+    pd.set_option('display.max_columns', None) #Убираем ограничение с колонок, при выводе БД
+    rd = pd.read_csv('test_ses.csv', delimiter=',') #Открываем БД, и ставим разделитель, что бы можно было вывести БД
+    db = pd.DataFrame(rd) #Переменная, при обращении к которой, будет выводится БД
+
+    print(db.describe()) #Вывод информации по БД, для того что бы найти пустые значения если они есть.
+    db.fillna(0) #Заменяем пустые значения на 0
+    db.sort_values('site1') #Сортировка таблицы по колонке 'site1'
+    print(db.describe()) #Перепроверяем, убрались ли пустые значения
+
+    #Выводим график БД
+    plt.scatter(db['site1'], db['site2']) #Указываем тип графика, и выбираем колонки из БД
+    plt.show() #Выводим точечный график
+    </code>
+    </pre>
+  </div>
 </body>
 </html>
