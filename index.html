@@ -23,53 +23,44 @@
     <li class="nav-item">
       <a class="nav-link text-white" href="../photo/index.html">Модель</a>
     </li>
-    <button type="button" class="btn btn-succes text-white px-3" type="submit" onClick="location.href='https://www.youtube.com/watch?v=kb8mcYwbFj8&ab_channel=GloAcademy'">YouTube</button>  
+    <li class="nav-item">
+      <a class="nav-link text-white" href="../test/index.html">Колаб test</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white" href="../housing/index.html">Колаб housing</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white" href="../regression/index.html">Колаб регрессия</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white" href="../visual/index.html">Колаб визуализация</a>
+    </li>
+    <button type="button" class="btn btn-succes text-white px-3" type="submit" onClick="location.href='https://www.youtube.com/watch?v=kb8mcYwbFj8&ab_channel=GloAcademy'">YouTube</button> 
   </ul>
   
 <div class="container">
-<pre>
-<code>
-------------------- test.ses -------------------
-import pandas as pd #Импорт библиотеки Pandas
-import numpy as np #Импорт библиотеки Numpy
-import matplotlib.pyplot as plt #Импорт библиотеки Matplotlib
-#from sklearn.linear_model import LinearRegression, GammaRegressor
-import csv
-
-pd.set_option('display.max_columns', None) #Убираем ограничение с колонок, при выводе БД
-rd = pd.read_csv('test_ses.csv', delimiter=',') #Открываем БД, и ставим разделитель, что бы можно было вывести БД
-db = pd.DataFrame(rd) #Переменная, при обращении к которой, будет выводится БД
-
-print(db.describe()) #Вывод информации по БД, для того что бы найти пустые значения если они есть.
-db.fillna(0) #Заменяем пустые значения на 0
-db.sort_values('site1') #Сортировка таблицы по колонке 'site1'
-print(db.describe()) #Перепроверяем, убрались ли пустые значения
-
-#Выводим график БД
-plt.scatter(db['site1'], db['site2']) #Указываем тип графика, и выбираем колонки из БД
-plt.show() #Выводим точечный график
-    
-    
-------------------- train.ses -------------------
-import pandas as pd #Импорт библиотеки Pandas
-import numpy as np #Импорт библиотеки Numpy
-import matplotlib.pyplot as plt #Импорт библиотеки Matplotlib
-import csv
-
-pd.set_option('display.max_columns', None) #Убираем ограничение с колонок, при выводе БД
-rd = pd.read_csv('train_ses.csv', delimiter=',') #Открываем БД, и ставим разделитель, что бы можно было вывести БД
-db = pd.DataFrame(rd) #Переменная, при обращении к которой, будет выводится БД
-
-print(db.describe()) #Вывод информации по БД, для того что бы найти пустые значения если они есть
-db.fillna(0) #Заменяем пусты значения на 0
-db.sort_values('site1') #Сортировка таблицы по колонке 'site1'
-print(db.describe()) #Перепроверяем, убрались ли пустые значения
-
-#Выводим график БД
-plt.scatter(db['site5'], db['site6']) #Указываем тип графика, и выбираем колонки из БД
-plt.show() #Выводим точечный график
-</code>
-</pre>
-</div>
+  <pre>
+    <code>
+      import pandas as pd #Импорт библиотеки Pandas
+      import numpy as np #Импорт библиотеки Numpy
+      import matplotlib.pyplot as plt #Импорт библиотеки Matplotlib
+      #from sklearn.linear_model import LinearRegression, GammaRegressor
+      import csv
+      
+      pd.set_option('display.max_columns', None) #Убираем ограничение с колонок, при выводе БД
+      rd = pd.read_csv('test_ses.csv', delimiter=',') #Открываем БД, и ставим разделитель, что бы можно было вывести БД
+      db = pd.DataFrame(rd) #Переменная, при обращении к которой, будет выводится БД
+      
+      print(db.describe()) #Вывод информации по БД, для того что бы найти пустые значения если они есть.
+      db.fillna(0) #Заменяем пустые значения на 0
+      db.sort_values('site1') #Сортировка таблицы по колонке 'site1'
+      print(db.describe()) #Перепроверяем, убрались ли пустые значения
+      
+      #Выводим график БД
+      plt.scatter(db['site1'], db['site2']) #Указываем тип графика, и выбираем колонки из БД
+      plt.show() #Выводим точечный график
+    </code>
+  </pre>
+  </div>
 </body>
 </html>
